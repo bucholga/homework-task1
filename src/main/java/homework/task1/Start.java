@@ -4,8 +4,9 @@ public class Start {
     public static void main(String[] args) {
         try {
             ImplementationOfSuperIntegerList testObj = new ImplementationOfSuperIntegerList();
-            for (int i = 0; i < 15; i++)
+            for (int i = 0; i < 15; i++){
                 testObj.add(i);
+            }
             testObj.printAll();
             System.out.println();
             testObj.removeByIndex(1);
@@ -28,8 +29,9 @@ public class Start {
             System.out.println();
             testObj.printAll();
             ImplementationOfSuperIntegerList eqTestObj = new ImplementationOfSuperIntegerList();
-            for (int i = 0; i < 5; i++)
+            for (int i = 0; i < 5; i++) {
                 eqTestObj.add(3);
+            }
             eqTestObj.removeByValue(3);
             System.out.println();
             eqTestObj.printAll();

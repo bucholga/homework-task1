@@ -21,17 +21,19 @@
 
         @Override
         public void removeByIndex(int index){
-            if (mainList.length == 0)
+            if (mainList.length == 0) {
                 throw new ArrayIndexOutOfBoundsException("Array is empty");
+            }
             if (index >= 0 && index < mainList.length){
                 int[] temp = new int[mainList.length-1];
                 for (int i = 0; i < mainList.length; i++) {
                     if (i < index) {
                         temp[i] = mainList[i];
                     }
-                    else
-                    if (i > index){
-                        temp[i-1] = mainList[i];
+                    else {
+                        if (i > index) {
+                            temp[i - 1] = mainList[i];
+                        }
                     }
                 }
                 mainList = temp;
@@ -71,8 +73,10 @@
                 }
                 mainList = temp;
             }
-            else if (index.getLength() == mainList.length){
+            else {
+                if (index.getLength() == mainList.length) {
                 mainList = new int[0];
+            }
             }
         }
 
